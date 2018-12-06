@@ -5,7 +5,7 @@ import './landing.css';
 export default function landing(props) {
     return (
         <div>
-            <img src="https://i.imgur.com/ct3cFze.png" />
+            <img src="https://i.imgur.com/ct3cFze.png" alt="puiLogo" />
             <div className="mainContain">
                 <div className="title">
                     <h1>Scale AoN</h1>

@@ -1,0 +1,64 @@
+html, body {
+    height: 100%;
+    /*background: rgba(94, 183, 255, 0.9);*/
+}
+
+main {
+}
+
+.mainContain {
+    margin-top: 150px;
+    text-align: center;
+    background: rgba(94, 183, 255, 0.5);
+}
+
+.title {
+    margin-top: 100px;
+    border: solid;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 30px;
+    font-family: 'VT323';
+    background-color: transparent;
+    text-shadow: ;
+    border-radius: 4px;
+    border-color: white;
+    text-shadow: 0rem 0.1rem 0.5rem #;
+    background-color: rgba(94, 183, 255, 0.9);
+    color: white;
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
+.description {
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    font-family: 'VT323';
+    font-size: 25px;
+    padding: 15px 35px;
+    vertical-align: middle;
+    text-shadow: 0rem 0.1rem 0.5rem #;
+    background-color: rgba(94, 183, 255, 0.9);
+    color: white;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: ;
+    color: ;
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
+img {
+    width: 700px;
+    position: absolute;
+    z-index: -1;
+    border: 2px solid;
+    margin-left: 250px;
+}

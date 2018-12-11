@@ -7,23 +7,19 @@ import nonCritPath from "./nonCritPath";
 import completionTime from "./completionTime";
 
 
-export default class projectPage extends React.Component {
-
-    render() {
-
-        return(
-            <div>
-                <header>
-                    <h1><Link to="/">ScaleAon</Link></h1>
-                </header>
-                <div className="top">
-                    <sidePanel />
-                    <critPath />
-                    <nonCritPath />
-                    <completionTime />
-                </div>
-            </div>
-        )
-    }
+export default function projectPage(props) {
+    return(
+        <div>
+        <header>
+        <h1><Link to="/">ScaleAon</Link></h1>
+        </header>
+        <div className="top">
+        <sidePanel />
+        <critPath />
+        <nonCritPath />
+        <completionTime />
+        </div>
+        </div>
+    )
 }
 

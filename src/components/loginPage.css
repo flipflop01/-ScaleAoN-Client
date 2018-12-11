@@ -1,0 +1,43 @@
+main {
+    text-align: center;
+}
+
+main div {
+    display: inline-block;
+}
+
+body {
+    margin: 0;
+    background: rgba(94, 183, 255, 0.9);
+}
+
+.login {
+    border: 2px solid black;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.signup * {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newAccount {
+    margin-top: 10px;
+    border: 2px solid black;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.createAccount {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

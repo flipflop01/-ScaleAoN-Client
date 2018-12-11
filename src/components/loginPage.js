@@ -11,12 +11,12 @@ export default class loginPage extends React.Component {
 
     goToDash(event) {
         event.preventDefault();
-        this.props.history.push(`/dash)}`);
+        this.props.history.push('/dash');
     }
 
     render() {
         return (
-            <div>
+            <div className="loginMain">
                 <div className="loginBox">
                     <div className="login">
                         <h3>Already have an account?</h3>

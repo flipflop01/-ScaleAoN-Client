@@ -1,6 +1,5 @@
 html, body {
     height: 100%;
-    /*background: rgba(94, 183, 255, 0.9);*/
 }
 
 main {
@@ -38,7 +37,7 @@ main {
     margin-right: auto;
 }
 
-button {
+.enter {
     font-family: 'VT323';
     font-size: 25px;
     padding: 15px 35px;
@@ -49,7 +48,7 @@ button {
     border-radius: 4px;
 }
 
-button:hover {
+.enter:hover {
     background-color: ;
     color: ;
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);

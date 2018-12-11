@@ -1,23 +1,24 @@
-main {
+.loginMain {
     text-align: center;
 }
 
-main div {
+.loginMain div {
     display: inline-block;
 }
 
-body {
-    margin: 0;
-    background: rgba(94, 183, 255, 0.9);
+.loginBox {
+    border: 5px solid red;
+    margin-top: 200px;
+    padding: 50px;
+    background: deepskyblue;
 }
 
 .login {
-    border: 2px solid black;
+    border: 5px solid white;
     width: max-content;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 10px;
     padding-right: 10px;
+    margin-right: 50px;
 }
 
 .signup * {
@@ -29,7 +30,7 @@ body {
 
 .newAccount {
     margin-top: 10px;
-    border: 2px solid black;
+    border: 5px solid white;
     width: max-content;
     margin-left: auto;
     margin-right: auto;
@@ -40,4 +41,15 @@ body {
 .createAccount {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+button {
+    font-family: 'VT323';
+    font-size: 15px;
+    padding: 10px 20px;
+    vertical-align: middle;
+    text-shadow: 0rem 0.1rem 0.5rem #;
+    background-color: rgba(94, 183, 255, 0.9);
+    color: white;
+    border-radius: 4px;
 }

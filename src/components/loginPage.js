@@ -1,5 +1,6 @@
 import React from 'react';
 import './loginPage.css';
+import {Link} from 'react-router-dom';
 
 
 export default class loginPage extends React.Component {
@@ -14,17 +15,30 @@ export default class loginPage extends React.Component {
         this.props.history.push('/dash');
     }
 
+    //----Login--------
+    goLogin(name, password) {
+        this.setState({
+            user: {
+                name,
+                password
+            }
+        })
+    }
+
     render() {
         return (
             <div className="loginMain">
+                <header>
+                    <h2><Link to="/">ScaleAon</Link></h2>
+                </header>
                 <div className="loginBox">
                     <div className="login">
                         <h3>Already have an account?</h3>
                         <form className="signup" onSubmit={e => this.goToDash(e)}>
-                            <label for="username">Name</label>
-                            <input className="loginname" type="text" autofocus required value="John Doe" />
+                            <label for="name">Name</label>
+                            <input className="name" type="text" autofocus required value="Marck Manga" />
                             <label for="password">Password</label>
-                            <input type="text" className="loginpass" autofocus required value="********" />
+                            <input type="text" className="loginpass" autofocus required value="pass1" />
                             <button className="toDash" type="submit">Log In</button>
                         </form>
                     </div>

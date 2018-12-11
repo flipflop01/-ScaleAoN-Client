@@ -1,0 +1,28 @@
+header {
+
+}
+
+h1 {
+
+}
+
+.dashBox {
+    margin: 50px 100px 0px 100px;
+    background: /*rgba(255, 23, 15, 0.7);*/ rgba(255, 255, 255, 1.0);
+    padding: 50px;
+    border: 10px solid rgba(94, 183, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(255, 23, 15, .9);
+}
+
+.projButton {
+    font-family: 'VT323';
+    font-size: 15px;
+    padding: 10px 20px;
+    vertical-align: middle;
+    text-shadow: 0rem 0.1rem 0.5rem #;
+    background-color: rgba(94, 183, 255, 0.9);
+    color: white;
+    border-radius: 4px;
+}
+
+

@@ -1,18 +1,22 @@
 html, body {
     height: 100%;
+    background-color: /*rgba(255, 255, 255, 1.0);  rgba(255, 23, 15, 0.9); rgba(3, 176, 23, 0.9)*/ rgba(94, 183, 255, 0.9);
+
 }
 
 main {
 }
 
 .mainContain {
-    margin-top: 150px;
+    margin: 125px 100px 0px 100px;
     text-align: center;
-    background: rgba(94, 183, 255, 0.5);
+    background: /*rgba(255, 23, 15, 0.7);*/ rgba(255, 255, 255, 1.0);
+    padding: 50px;
+    border: 10px solid rgba(94, 183, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(255, 23, 15, .9);
 }
 
 .title {
-    margin-top: 100px;
     border: solid;
     width: max-content;
     margin-left: auto;

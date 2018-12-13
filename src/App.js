@@ -4,6 +4,7 @@ import landing from './components/landing';
 import loginPage from './components/loginPage';
 import projectPage from './components/projectPage';
 import dashboard from './components/dashboard';
+import bom from './components/bom';
 import './App.css';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
                         <Route exact path="/login" component={loginPage} />
                         <Route exact path="/dash" component={dashboard} />
                         <Route exact path="/project" component={projectPage} />
+                        <Route exact path="/bom" component={bom} />
                     </main>
                 </div>
             </Router>

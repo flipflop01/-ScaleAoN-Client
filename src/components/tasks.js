@@ -7,7 +7,9 @@ export default function tasks(props) {
             <section className="keySection">
                 <h3>Tasks</h3>
                     <button class="addTask">Add Task</button>
+                    <button class="btn remTask">Remove Task</button>
                     <ul>
+
                     </ul>
             </section>
         </div>

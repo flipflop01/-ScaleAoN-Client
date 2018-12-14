@@ -1,32 +1,36 @@
-import {ADD_TASK, DELETE_TASK, ADD_ITEM, DELETE_ITEM, NEW_PROJECT, DELETE_PROJECT} from '../actions/actions';
+import {ADD_TASK, DELETE_TASK, ADD_ITEM, DELETE_ITEM, ADD_PROJECT, DELETE_PROJECT} from '../actions/actions';
 
-const initialState = {};
+const initialState = {
+    projects: [
+        {title: "HELKON100"},
+        {title: "EZ460-EQ"},
+        {title: "FJ110C"}
+    ]
+};
 
-export default (state = initialState, action) => {
-
-    if (action.type === ADD_TASK) {
-        return Object.assign({}, state, {});
+export const aonReducer = (state=initialState, action) => {
+    if (action.type === ADD_PROJECT) {
+        return Object.assign({}, state, {
+            projects: [...state.projects, {
+                title: action.title
+            }]
+        });
     }
+    else if (action.type === ADD_ITEM) {
+        let projects = state.projects.map((project, index) => {
+            if (index !== action.projectIndex) {
+                return project;
+            }
+            return Object.assign({}, project, {
+                items: [...project.items, {
+                    text: action.text
+                }]
+            });
+        });
 
-    if (action.type === DELETE_TASK) {
-        return Object.assign({}, state, {});
+        return Object.assign({}, state, {
+            projects
+        });
     }
-
-    if (action.type === ADD_ITEM) {
-        return Object.assign({}, state, {});
-    }
-
-    if (action.type === DELETE_ITEM) {
-        return Object.assign({}, state, {});
-    }
-
-    if (action.type === NEW_PROJECT) {
-        return Object.assign({}, state, {});
-    }
-
-    if (action.type === DELETE_PROJECT) {
-        return Object.assign({}, state, {});
-    }
-
     return state;
 };

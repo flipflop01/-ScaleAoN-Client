@@ -28,3 +28,7 @@ h1 {
 .newProjForm * {
     display: block;
 }
+
+.npForm * {
+    display: block;
+}

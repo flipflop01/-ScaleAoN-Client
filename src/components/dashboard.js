@@ -1,8 +1,14 @@
 import React from 'react';
 import './dashboard.css';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 
-export default class dashboard extends React.Component {
+import Project from './project';
+import AddForm from './addform';
+
+import {addProject} from '../actions/actions';
+
+export class Dashboard extends React.Component {
     constructor(props) {
         super(props);
 
@@ -17,12 +23,19 @@ export default class dashboard extends React.Component {
         });
     }
 
-    goToBom(event) {
-        event.preventDefault();
-        this.props.history.push('/bom');
+    addProject(text) {
+        let title = this.state.text;
+        this.props.dispatch(addProject(title));
     }
 
+
     render() {
+
+        const projects = this.props.projects.map((project, index) => (
+            <li className="proj-wrapper" key={index}>
+                <Project index={index} {...project} />
+            </li>
+        ));
 
         return(
             <div>
@@ -31,22 +44,32 @@ export default class dashboard extends React.Component {
                 </header>
                 <div className="dashBox">
                     <h2>Welcome Marck Manga</h2>
-                    <form className="newProjForm" onSubmit={e => this.goToProject(e)}>
-                        <input type="text" value={(this.state.text)}
-                        onChange={e => this.setText(e.target.value)} />
-                        <button className="btn projButton" onClick={e => this.goToBom(e)}>Create New Project</button>
-                    </form>
+                        <form className="npForm" onSubmit={e => this.addProject(e)}>
+                            <input
+                                type="text"
+                                value={(this.state.text)}
+                                onChange={e => this.setText(e.target.value)}
+                                />
+                            <button className="btn projButton">Create New Project</button>
+                        </form>
                     <div>
                         <h3>Current Projects</h3>
                         <ul>
-                            <li><button className="projButton">FJ1000BZL</button></li>
-                            <li><button className="projButton">HELKON110</button></li>
-                            <li><button className="projButton">EZ7003W</button></li>
-                            <li><button className="projButton">EZ460EQ</button></li>
+                            {projects}
                         </ul>
                     </div>
                 </div>
             </div>
-)
+        )
     }
 }
+
+Dashboard.defaultProps = {
+    title: 'Dashboard'
+};
+
+const mapStateToProps = state => ({
+    projects: state.projects
+});
+
+export default connect(mapStateToProps)(Dashboard);

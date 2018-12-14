@@ -6,7 +6,7 @@ import tasks from "./tasks"
 
 export default function sidePanel(props) {
     return(
-        <div className="sidePanel">
+        <div>
             <bom />
             <tasks />
         </div>

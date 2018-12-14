@@ -1,6 +1,6 @@
 import {createStore} from 'redux';
 
-import reducers from './reducers/reducers';
+import {aonReducer} from './reducers/reducers';
 
-export default createStore(reducers);
+export default createStore(aonReducer);
 

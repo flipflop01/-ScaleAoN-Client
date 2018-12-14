@@ -1,3 +1,14 @@
+export const ADD_PROJECT = 'ADD_PROJECT';
+export const addProject = title => ({
+    type: ADD_PROJECT,
+    title
+});
+
+export const DELETE_PROJECT = "DELETE_PROJECT";
+export const deleteProject = () => ({
+    type: DELETE_PROJECT
+});
+
 export const ADD_TASK = "ADD_TASK";
 export const addTask = () => ({
     type: ADD_TASK
@@ -18,12 +29,3 @@ export const deleteItem = () => ({
     type: DELETE_ITEM
 });
 
-export const NEW_PROJECT = "NEW_PROJECT";
-export const newProject = () => ({
-    type: NEW_PROJECT
-});
-
-export const DELETE_PROJECT = "DELETE_PROJECT";
-export const deleteProject = () => ({
-    type: DELETE_PROJECT
-});

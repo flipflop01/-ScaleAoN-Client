@@ -1,37 +1,47 @@
 import React from 'react';
 import './dashboard.css';
 import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
 
 import Project from './project';
 import AddForm from './addform';
 
-import {addProject} from '../actions/actions';
 
-export class Dashboard extends React.Component {
+export default class Dashboard extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            text: ''
-        }
+            projects: [{
+                title: 'HELKON',
+                items: ['battery', 'case', 'wire']
+            }, {
+                title: 'EZ700',
+                items: ['p156', 'FJ Case', 'p100 Batteries']
+            }, {
+                title: 'ALK120',
+                items: ['battery', 'FJ Case', 'harness']
+            }],
+            projectName: ''
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.addProject = this.addProject.bind(this);
+
     }
 
-    setText(text) {
-        this.setState({
-            text
-        });
+    handleChange(event) {
+        this.setState({projectName: event.target.value});
     }
 
-    addProject(text) {
-        let title = this.state.text;
-        this.props.dispatch(addProject(title));
+    addProject(event) {
+        event.preventDefault();
+        console.log(this.state.projectName);
     }
 
 
     render() {
 
-        const projects = this.props.projects.map((project, index) => (
+        const projects = this.state.projects.map((project, index) => (
             <li className="proj-wrapper" key={index}>
                 <Project index={index} {...project} />
             </li>
@@ -44,13 +54,14 @@ export class Dashboard extends React.Component {
                 </header>
                 <div className="dashBox">
                     <h2>Welcome Marck Manga</h2>
-                        <form className="npForm" onSubmit={e => this.addProject(e)}>
+                        <form className="npForm" onSubmit={this.addProject}>
                             <input
                                 type="text"
-                                value={(this.state.text)}
-                                onChange={e => this.setText(e.target.value)}
+                                name='title'
+                                value={this.state.projectName}
+                                onChange={this.handleChange}
                                 />
-                            <button className="btn projButton">Create New Project</button>
+                            <button className="btn projButton" type="submit">Create New Project</button>
                         </form>
                     <div>
                         <h3>Current Projects</h3>
@@ -64,12 +75,3 @@ export class Dashboard extends React.Component {
     }
 }
 
-Dashboard.defaultProps = {
-    title: 'Dashboard'
-};
-
-const mapStateToProps = state => ({
-    projects: state.projects
-});
-
-export default connect(mapStateToProps)(Dashboard);

@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: rgba(94, 183, 255, 0.9);
+    border-radius: 10px;
+    background-image: url("https://i.imgur.com/ct3cFze.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    margin: 0px 30px 0px 30px;
+    border: 5px  ;
+    height: 100%;
+    border-radius: 10px;
+}

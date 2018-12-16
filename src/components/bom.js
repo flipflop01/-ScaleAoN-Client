@@ -1,16 +1,10 @@
 import React from 'react';
 import './bom.css';
 import Item from './item';
-import {addItem} from '../actions/actions';
 import addForm from './addform';
 
 export default class bom extends React.Component {
 
-    addItem(text) {
-        this.props.dispatch(
-            addItem(text)
-        );
-    }
 
     render() {
 

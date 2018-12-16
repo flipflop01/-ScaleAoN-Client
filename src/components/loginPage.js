@@ -28,9 +28,6 @@ export default class loginPage extends React.Component {
     render() {
         return (
             <div className="loginMain">
-                <header>
-                    <h2><Link to="/">ScaleAon</Link></h2>
-                </header>
                 <div className="loginBox">
                     <div className="login">
                         <h3>Already have an account?</h3>

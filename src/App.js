@@ -4,7 +4,7 @@ import landing from './components/landing';
 import loginPage from './components/loginPage';
 import projectPage from './components/projectPage';
 import Dashboard from './components/dashboard';
-import bom from './components/bom';
+//import SidePanel from './components/sidePanel';
 import './App.css';
 
 class App extends Component {
@@ -16,8 +16,7 @@ class App extends Component {
                         <Route exact path="/" component={landing} />
                         <Route exact path="/login" component={loginPage} />
                         <Route exact path="/dash" component={Dashboard} />
-                        <Route exact path="/project" component={projectPage} />
-                        <Route exact path="/bom" component={bom} />
+                        <Route exact path="/projectPage" component={projectPage} />
                     </main>
                 </div>
             </Router>

@@ -13,11 +13,23 @@ export default function projectPage(props) {
             <header>
                 <h1><Link to="/">ScaleAon</Link></h1>
             </header>
-
-            <SidePanel />
-            <CritPath />
-            <NonCritPath />
+            <div className="top">
+                <div className="grids">
+                    <section className="sidePanel">
+                        <div>
+                            <SidePanel />
+                        </div>
+                    </section>
+                    <section className="critPath">
+                        <CritPath />
+                    </section>
+                    <section className="nonCritPath">
+                        <NonCritPath />
+                    </section>
+                </div>
+            </div>
             <CompletionTime />
+
         </div>
     )
 }

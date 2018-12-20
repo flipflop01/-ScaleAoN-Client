@@ -3,10 +3,10 @@ import './completionTime.css';
 
 export default function completionTime(props) {
     return(
-        <div class="final">
-            <section class="completion">
-            <h4 class="est">Estimated Completion Time</h4>
-                <div class='actNode'>
+        <div className="final">
+            <section className="completion">
+            <h4 className="est">Estimated Completion Time</h4>
+                <div className='actNode'>
 
                 </div>
             </section>

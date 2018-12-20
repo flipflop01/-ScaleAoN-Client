@@ -1,14 +1,19 @@
 import React from 'react';
 import './sidePanel.css';
-import bom from "./bom";
-import tasks from "./tasks"
+import Bom from "./bom";
+import Tasks from "./tasks"
 
 
-export default function sidePanel(props) {
+export default function SidePanel(props) {
     return(
         <div>
-            <bom />
-            <tasks />
+            <section className="bomSection">
+                <Bom />
+            </section>
+            <section className="keySection">
+                <Tasks />
+            </section>
+            <button className="btn">Save Project</button>
         </div>
     )
 }

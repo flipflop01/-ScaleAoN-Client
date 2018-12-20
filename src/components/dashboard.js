@@ -3,7 +3,7 @@ import './dashboard.css';
 import {Link} from 'react-router-dom';
 
 import Project from './project';
-import AddForm from './addform';
+//import AddForm from './addform';
 
 
 export default class Dashboard extends React.Component {
@@ -36,6 +36,15 @@ export default class Dashboard extends React.Component {
     addProject(event) {
         event.preventDefault();
         console.log(this.state.projectName);
+        this.setState({
+            projects: [...this.state.projects, this.state.projectName]
+        })
+        console.log(this.state.projects);
+    }
+
+    goToProjectPage(event) {
+        event.preventDefault();
+        this.props.history.push('/projectPage');
     }
 
 
@@ -54,14 +63,14 @@ export default class Dashboard extends React.Component {
                 </header>
                 <div className="dashBox">
                     <h2>Welcome Marck Manga</h2>
-                        <form className="npForm" onSubmit={this.addProject}>
+                        <form className="npForm" /*onSubmit={this.addProject}*/>
                             <input
                                 type="text"
                                 name='title'
                                 value={this.state.projectName}
                                 onChange={this.handleChange}
                                 />
-                            <button className="btn projButton" type="submit">Create New Project</button>
+                        <button onClick={e => this.goToProjectPage(e)} className="btn projButton" type="submit">Create New Project</button>
                         </form>
                     <div>
                         <h3>Current Projects</h3>

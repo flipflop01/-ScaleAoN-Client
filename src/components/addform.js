@@ -2,7 +2,7 @@ import React from 'react';
 
 import './addform.css';
 
-export default class addForm extends React.Component {
+export default class AddForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -32,7 +32,7 @@ export default class addForm extends React.Component {
             return (
                 <div className="add-button"
                 onClick={() => this.setEditing(true)}>
-                <a>Add a {this.props.type}...</a>
+                <a>Add {this.props.type}</a>
                 </div>
             );
         }

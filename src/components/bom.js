@@ -1,6 +1,6 @@
 import React from 'react';
 import './bom.css';
-//import AddForm from './addform';
+import BomItems from './BomItems';
 
 export default class Bom extends React.Component {
     constructor(props) {
@@ -14,9 +14,20 @@ export default class Bom extends React.Component {
     }
 
     addItem(event) {
+        if (this._inputElement.value !== "") {
+            let newItem ={
+                text: this._inputElement.value,
+                key: Date.now()
+            };
+            this.setState((prevState) => {
+                return {
+                    items: prevState.items.concat(newItem)
+                };
+            });
+        }
+        this._inputElement.value = '';
+        console.log(this.state.items);
         event.preventDefault();
-        console.log('Adding Item');
-        //this.setState({items: e.target.value})
     }
 
     render() {
@@ -34,9 +45,7 @@ export default class Bom extends React.Component {
                         <button type="submit" className='btn'>Add Item</button>
                     </form>
                 </div>
-                <ul className="itemList">
-                    {this.state.items.map(item => <li key={item}>{item}</li>)}
-                </ul>
+                <BomItems entries={this.state.items} />
             </div>
         )
     }

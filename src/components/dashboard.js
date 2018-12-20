@@ -3,7 +3,6 @@ import './dashboard.css';
 import {Link} from 'react-router-dom';
 
 import Project from './project';
-//import AddForm from './addform';
 
 
 export default class Dashboard extends React.Component {
@@ -63,7 +62,7 @@ export default class Dashboard extends React.Component {
                 </header>
                 <div className="dashBox">
                     <h2>Welcome Marck Manga</h2>
-                        <form className="npForm" /*onSubmit={this.addProject}*/>
+                        <form className="npForm">
                             <input
                                 type="text"
                                 name='title'

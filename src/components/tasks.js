@@ -1,21 +1,34 @@
 import React from 'react';
 import './tasks.css';
-//import AddForm from './addform';
+import TaskItems from './TaskItems';
+
 
 export default class Tasks extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            tasks: ['Import', 'Activate', 'Program']
+            tasks: []
         };
 
         this.addTask = this.addTask.bind(this);
     }
 
     addTask(event) {
+        if (this._inputElement.value !== "") {
+            let newTask ={
+                text: this._inputElement.value,
+                key: Date.now()
+            };
+            this.setState((prevState) => {
+                return {
+                    tasks: prevState.tasks.concat(newTask)
+                };
+            });
+        }
+        this._inputElement.value = '';
+        console.log(this.state.tasks);
         event.preventDefault();
-        console.log('Adding Task');
     }
 
 
@@ -27,13 +40,13 @@ export default class Tasks extends React.Component {
                 <h3>Task List</h3>
                 <div className="formHeader">
                     <form onSubmit={this.addTask}>
-                        <input placeholder="Enter Task" className="taskInput"></input>
+                        <input
+                            ref={(a) => this._inputElement = a}
+                            placeholder="Enter Task" className="taskInput"></input>
                         <button type="submit" className='btn'>Add Task</button>
                     </form>
                 </div>
-                <ul className="itemList">
-                    {this.state.tasks.map(task => <li key={task}>{task}</li>)}
-                </ul>
+                <TaskItems entries={this.state.tasks} />
             </div>
         )
     }

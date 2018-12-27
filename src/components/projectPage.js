@@ -29,7 +29,6 @@ export default function projectPage(props) {
                 </div>
             </div>
             <CompletionTime />
-
         </div>
     )
 }

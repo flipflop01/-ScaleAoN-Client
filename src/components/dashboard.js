@@ -10,17 +10,7 @@ export default class Dashboard extends React.Component {
         super(props);
 
         this.state = {
-            projects: [{
-                title: 'HELKON',
-                items: ['battery', 'case', 'wire']
-            }, {
-                title: 'EZ700',
-                items: ['p156', 'FJ Case', 'p100 Batteries']
-            }, {
-                title: 'ALK120',
-                items: ['battery', 'FJ Case', 'harness']
-            }],
-            projectName: ''
+            projects: [{}]
         };
 
         this.handleChange = this.handleChange.bind(this);

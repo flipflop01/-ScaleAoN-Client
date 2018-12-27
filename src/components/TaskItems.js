@@ -11,9 +11,9 @@ export default class TaskItems extends React.Component {
         let listTasks = taskEntries.map(this.createTasks);
 
         return (
-            <ul className="theList">
+            <ol className="theTaskList" type="A">
                 {listTasks}
-            </ul>
+            </ol>
         );
     }
 }

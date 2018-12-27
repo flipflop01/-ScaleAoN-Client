@@ -1,5 +1,5 @@
 .mainContain {
-    margin: 125px 100px 0px 100px;
+    margin: 200px 100px 0px 100px;
     text-align: center;
     background: rgba(94, 183, 255, 1);;
     padding: 50px;
@@ -52,10 +52,10 @@
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }
 
-img {
+/*img {
     width: 700px;
     position: absolute;
     z-index: -1;
     border: 2px solid;
     margin-left: 250px;
-}
+}*/

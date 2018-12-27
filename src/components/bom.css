@@ -1,8 +1,13 @@
 .itemInput {
     width: 150px;
     height: 30px;
-    border: 2px solid white;
+    border: 5px solid white;
     margin-right: 2px;
+}
+
+li {
+    text-align: left;
+    margin-top: 7px;
 }
 
 

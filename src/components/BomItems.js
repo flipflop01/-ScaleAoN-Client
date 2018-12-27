@@ -11,9 +11,9 @@ export default class BomItems extends React.Component {
         let listItems = bomEntries.map(this.createTasks);
 
         return (
-            <ul className="theList">
+            <ol className="theList">
                 {listItems}
-            </ul>
+            </ol>
         );
     }
 }

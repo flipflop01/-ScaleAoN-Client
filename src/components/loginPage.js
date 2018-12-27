@@ -29,6 +29,7 @@ export default class loginPage extends React.Component {
         return (
             <div className="loginMain">
                 <div className="loginBox">
+                    <div className="innerContain">
                     <div className="login">
                         <h3>Already have an account?</h3>
                         <form className="signup" onSubmit={e => this.goToDash(e)}>
@@ -48,6 +49,7 @@ export default class loginPage extends React.Component {
                             <input type="text" className="loginpass" autofocus required value="********" />
                             <button className="createAccount" type="submit">Create Account</button>
                         </form>
+                    </div>
                     </div>
                 </div>
             </div>
